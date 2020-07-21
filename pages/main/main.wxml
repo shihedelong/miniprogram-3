@@ -1,0 +1,32 @@
+<import src="../common/head.wxml" />
+<import src="../common/foot.wxml" />
+
+<view class="container">
+  <view class="page__hd">
+        <view class="page__title">activity</view>
+  </view>
+  
+  <view class="page-body">
+
+    <view class="page-section page-section-spacing swiper">
+      <swiper indicator-dots="true"
+        autoplay="true" interval="3300" duration="500">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+            <view class="swiper-item {{item}}"></view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+ 
+    <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+
+    <button >公众号1展示柜</button>
+    <button >公众号2展示柜</button>
+    <button >公众号3展示柜</button>
+    <button >公众号4展示柜</button>
+
+  </view>
+
+  <template is="foot" />
+</view>
